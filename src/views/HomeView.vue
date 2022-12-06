@@ -9,7 +9,7 @@ import zayanImg from '@/assets/Zayan.png'
         <div class="flex">
         </div>
         <div class="flex items-center h-screen">
-          <h1 class="mr-24">
+          <h1 class="mr-20 ml-6">
             Kavab coming soon!
           </h1>
         </div>
