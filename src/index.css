@@ -9,10 +9,6 @@
         @apply font-poppins bg-gray-800 text-white
     }
     h1 {
-        @apply text-2xl text-center font-bold
-    }
-    
-    .page {
-        @apply px-6 pt-8
+        @apply xl:text-6xl lg:text-5xl text-4xl text-center font-bold select-none
     }
 }
