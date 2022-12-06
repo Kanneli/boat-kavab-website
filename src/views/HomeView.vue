@@ -3,6 +3,10 @@
 
 <template>
   <main>
-    Kavab coming soon
+    <div class="page">
+      <h1>
+        Kavab coming soon
+      </h1>
+    </div>
   </main>
 </template>
