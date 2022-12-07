@@ -167,8 +167,10 @@ export default {
   mounted () {
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", this.Xeyes)
+      this.eyesInit()
     } else {
       this.Xeyes()
+      this.eyesInit()
     }
   }
 }
