@@ -7,12 +7,12 @@ import zayanImg from '@/assets/Zayan.png'
     <div id="mainContent" class="h-screen flex-row items-center">
       <div class="frame" id="kavab" :style="`background-image: url('${zayanImg}'); background-position: 0% 70%`">
         <div style="position: relative;">
-          <div class="eyeball left"></div>
-          <span class="pupil" id="kavab-eye-1"></span>
+          <div class="eyeball1 left"></div>
+          <span class="pupil1" id="kavab-eye-1"></span>
         </div>
         <div style="position: relative;">
-          <div class="eyeball right"></div>
-          <span class="pupil" id="kavab-eye-2"></span>
+          <div class="eyeball2 right"></div>
+          <span class="pupil2" id="kavab-eye-2"></span>
         </div>
         <div class="inner" id="kavab-inner"></div>
       </div>
@@ -30,10 +30,10 @@ export default {
       eye2Obj: null,
       e1Lft: 60.50,
       e1Top: 0,
-      e1Radius: 2.4,
+      e1Radius: 3,
       e2Lft: 80.59,
       e2Top: 0,
-      e2Radius: 2.4,
+      e2Radius: 3,
       e1x: null,
       e1y: null, // eye centre relative to top left of doc
       r1: null,
@@ -71,18 +71,18 @@ export default {
     },
 
     eyesInit () {
-      var faceWidth = 380;
-      var faceHeight = 380;
+      var faceWidth = 400;
+      var faceHeight = 400;
       // get left,top of eyes relative to parent
-      this.e1xLoc = 0.01 * this.e1Lft * faceWidth - 190 / 2;
+      this.e1xLoc = 0.01 * this.e1Lft * faceWidth - 230 / 2;
       this.e1yLoc = 0.01 * this.e1Top * faceHeight + 165 / 2;
-      this.e2xLoc = 0.01 * this.e2Lft * faceWidth - 200 / 2;
+      this.e2xLoc = 0.01 * this.e2Lft * faceWidth - 230 / 2;
       this.e2yLoc = 0.01 * this.e2Top * faceHeight + 165 / 2;
       // get absolute position of centre of eyes wrt to top left of document body
       let tmp = this.getPosition(this.faceObj);
-      this.e1x = tmp.x + 0.01 * this.e1Lft * faceWidth - 190 / 2;
+      this.e1x = tmp.x + 0.01 * this.e1Lft * faceWidth - 230 / 2;
       this.e1y = tmp.y + 0.01 * this.e1Top * faceHeight + 165 / 2;
-      this.e2x = tmp.x + 0.01 * this.e2Lft * faceWidth - 200 / 2;
+      this.e2x = tmp.x + 0.01 * this.e2Lft * faceWidth - 230 / 2;
       this.e2y = tmp.y + 0.01 * this.e2Top * faceHeight + 165 / 2;
       this.r1 = 0.01 * this.e1Radius * faceWidth;
       this.r2 = 0.01 * this.e2Radius * faceWidth;
@@ -165,13 +165,8 @@ export default {
     },
   },
   mounted () {
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", this.Xeyes)
-      this.eyesInit()
-    } else {
-      this.Xeyes()
-      this.eyesInit()
-    }
+    this.Xeyes()
+    this.eyesInit()
   }
 }
 </script>
@@ -193,32 +188,67 @@ export default {
 
 /* eyeball stuff */
 
-.frame .eyeball {
-  background: url('https://i.cdn.turner.com/adultswim/big/img/2013/10/24/eyeball.png') no-repeat;
-  width: 41px;
-  height: 41px;
+.frame .eyeball1 {
+  background: white;
+  border-radius: 100%;
+  border: 4px solid lightgray;
+  width: 50px;
+  height: 50px;
   position: absolute;
 }
+.frame .eyeball2 {
+  background: white;
+  border-radius: 100%;
+  border: 4px solid lightgray;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin-top: 5px;
+}
 
-.frame .eyeball span,
-.pupil {
+.frame .eyeball1.eyeball2 span,
+.pupil1 {
   z-index: 10;
-  background: url('https://i.cdn.turner.com/adultswim/big/img/2013/10/24/pupil.png') no-repeat;
+  background: black;
+  border-radius: 100%;
   display: block;
-  width: 13px;
-  height: 13px;
+  width: 25px;
+  height: 25px;
   position: absolute;
   top: 40%;
-  left: 30%
+  left: 30%;
+  margin-left: -4px;
+  margin-top: -4px;
+}
+.pupil2 {
+  z-index: 10;
+  background: black;
+  border-radius: 100%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  margin-left: -8px;
+  margin-top: -4px;
 }
 
-.frame#kavab .eyeball.left {
-  left: 119px;
-  top: 70px;
+.frame#kavab .eyeball1.left {
+  left: 110px;
+  top: 65px;
+}
+.frame#kavab .eyeball2.left {
+  left: 110px;
+  top: 65px;
 }
 
-.frame#kavab .eyeball.right {
+.frame#kavab .eyeball1.right {
   left: 188px;
-  top: 70px;
+  top: 65px;
+}
+.frame#kavab .eyeball2.right {
+  left: 188px;
+  top: 65px;
 }
 </style>
