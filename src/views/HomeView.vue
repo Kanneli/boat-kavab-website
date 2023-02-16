@@ -17,17 +17,18 @@ import zayanImg from '@/assets/Zayan.png'
         <div class="inner" id="kavab-inner"></div>
       </div>
     </div>
-      <div class="cake">
-        <div class="plate"></div>
-        <div class="layer layer-1"></div>
-        <div class="layer layer-2"></div>
-        <div class="layer layer-3"></div>
-        <div class="layer layer-4"></div>
-        <div class="layer layer-top"></div>
-        <div class="layer layer-top-cream1"></div>
-        <div class="layer layer-top-cream2"></div>
-        <div class="layer candle"></div>
-      </div>
+    <!-- Code used from https://codepen.io/alicepopoff/pen/WdEjKa -->
+    <div class="cake">
+      <div class="plate"></div>
+      <div class="layer layer-1"></div>
+      <div class="layer layer-2"></div>
+      <div class="layer layer-3"></div>
+      <div class="layer layer-4"></div>
+      <div class="layer layer-top"></div>
+      <div class="layer layer-top-cream1"></div>
+      <div class="layer layer-top-cream2"></div>
+      <div class="layer candle"></div>
+    </div>
   </main>
 </template>
 
