@@ -29,6 +29,9 @@ import zayanImg from '@/assets/Zayan.png'
       <div class="layer layer-top-cream2"></div>
       <div class="layer candle"></div>
     </div>
+    <div style="position: fixed; top: 10%; text-align: center; width: 100%; font-size: 4rem; font-weight: bold">
+      AAAAAAAAAAAAAAAAAAAAAA
+    </div>
   </main>
 </template>
 
