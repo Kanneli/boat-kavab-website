@@ -214,7 +214,23 @@ export default {
   font-size: 6rem;
   font-weight: bold;
 }
-@media only screen and (max-width: 575px) {
+@media only screen and (min-width: 1200px) {
+  .top-text {
+    font-size: 6rem;
+  }
+  .ma_cake {
+    bottom: -40vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .top-text {
+    font-size: 2.5rem;
+  }
+  .ma_cake {
+    bottom: -40vh;
+  }
+}
+@media only screen and (max-width: 768px) {
   .top-text {
     font-size: 3rem;
   }
