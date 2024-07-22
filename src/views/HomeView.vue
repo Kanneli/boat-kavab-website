@@ -1,6 +1,6 @@
 <script setup>
 import zayanImg from '@/assets/Zayan.png'
-import kavabSong from '@/assets/Kavab.mp3'
+// import kavabSong from '@/assets/Kavab.mp3'
 import MACake from '@/assets/MA_Cake.svg'
 </script>
 
@@ -186,14 +186,14 @@ export default {
       // this.$el.onclick = this.associateObjWithEvent(this, "eyesMove");
     },
   },
-  playAudio() {
-  },
+  // playAudio() {
+  // },
   mounted () {
     this.Xeyes()
     this.eyesInit()
     // this.playAudio()
-    this.audio = new Audio(kavabSong);
-    this.audio.play()
+    // this.audio = new Audio(kavabSong);
+    // this.audio.play()
   }
 }
 </script>
@@ -214,7 +214,7 @@ export default {
   font-size: 6rem;
   font-weight: bold;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 575px) {
   .top-text {
     font-size: 3rem;
   }
