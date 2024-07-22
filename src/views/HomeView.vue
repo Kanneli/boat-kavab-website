@@ -212,27 +212,7 @@ export default {
   width: 100%;
   font-weight: bold;
 }
-<<<<<<< HEAD
 @media only screen and (max-width: 1279px) {
-=======
-@media only screen and (min-width: 1200px) {
-  .top-text {
-    font-size: 6rem;
-  }
-  .ma_cake {
-    bottom: -40vh;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .top-text {
-    font-size: 2.5rem;
-  }
-  .ma_cake {
-    bottom: -40vh;
-  }
-}
-@media only screen and (max-width: 768px) {
->>>>>>> refs/remotes/origin/main
   .top-text {
     font-size: 3rem;
   }
