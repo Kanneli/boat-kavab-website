@@ -1,5 +1,7 @@
 <script setup>
 import zayanImg from '@/assets/Zayan.png'
+import kavabSong from '@/assets/Kavab.mp3'
+import MACake from '@/assets/MA_Cake.svg'
 </script>
 
 <template>
@@ -18,7 +20,7 @@ import zayanImg from '@/assets/Zayan.png'
       </div>
     </div>
     <!-- Code used from https://codepen.io/alicepopoff/pen/WdEjKa -->
-    <div class="cake">
+    <!-- <div class="cake">
       <div class="plate"></div>
       <div class="layer layer-1"></div>
       <div class="layer layer-2"></div>
@@ -28,9 +30,13 @@ import zayanImg from '@/assets/Zayan.png'
       <div class="layer layer-top-cream1"></div>
       <div class="layer layer-top-cream2"></div>
       <div class="layer candle"></div>
+    </div> -->
+    <div class="ma_cake">
+      <img :src="MACake" alt="" style="width: 600px;">
     </div>
-    <div style="position: fixed; top: 10%; text-align: center; width: 100%; font-size: 4rem; font-weight: bold">
-      AAAAAAAAAAAAAAAAAAAAAA
+    <div class="top-text">
+      GRATS EY? <br>
+      KON GRATS EH
     </div>
   </main>
 </template>
@@ -58,7 +64,8 @@ export default {
       e2y: null,
       r2: null, // eye radii
       e2xLoc: null,
-      e2yLoc: null
+      e2yLoc: null,
+      audio: null
     }
   },
   methods: {
@@ -179,14 +186,43 @@ export default {
       // this.$el.onclick = this.associateObjWithEvent(this, "eyesMove");
     },
   },
+  playAudio() {
+  },
   mounted () {
     this.Xeyes()
     this.eyesInit()
+    // this.playAudio()
+    this.audio = new Audio(kavabSong);
+    this.audio.play()
   }
 }
 </script>
 
 <style>
+.ma_cake {
+  position: fixed;
+  bottom: -5vh;
+  width: 600px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.top-text {
+  position: fixed;
+  top: 5%;
+  text-align: center;
+  width: 100%;
+  font-size: 6rem;
+  font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+  .top-text {
+    font-size: 3rem;
+  }
+  .ma_cake {
+    bottom: -40vh;
+  }
+}
+
 #mainContent {
   display: flex;
   text-align: center;
