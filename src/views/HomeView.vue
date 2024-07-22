@@ -201,7 +201,6 @@ export default {
 <style>
 .ma_cake {
   position: fixed;
-  bottom: -5vh;
   width: 600px;
   left: 50%;
   transform: translateX(-50%);
@@ -211,15 +210,22 @@ export default {
   top: 5%;
   text-align: center;
   width: 100%;
-  font-size: 6rem;
   font-weight: bold;
 }
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 1279px) {
   .top-text {
     font-size: 3rem;
   }
   .ma_cake {
     bottom: -40vh;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .top-text {
+    font-size: 5rem;
+  }
+  .ma_cake {
+    bottom: -15rem;
   }
 }
 
