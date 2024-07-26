@@ -1,6 +1,6 @@
 <script setup>
 import zayanImg from '@/assets/Zayan.png'
-// import kavabSong from '@/assets/Kavab.mp3'
+import kavabSong from '@/assets/Kavab.mp3'
 import MACake from '@/assets/MA_Cake.svg'
 </script>
 
@@ -192,8 +192,8 @@ export default {
     this.Xeyes()
     this.eyesInit()
     // this.playAudio()
-    // this.audio = new Audio(kavabSong);
-    // this.audio.play()
+    this.audio = new Audio(kavabSong);
+    this.audio.play()
   }
 }
 </script>
